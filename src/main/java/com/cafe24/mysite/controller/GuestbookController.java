@@ -1,5 +1,6 @@
 package com.cafe24.mysite.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.cafe24.mysite.dto.JSONResult;
 import com.cafe24.mysite.service.GuestbookService;
+import com.cafe24.mysite.service.GuestbookService2;
 import com.cafe24.mysite.vo.GuestbookVo;
 
 @Controller
@@ -18,6 +21,10 @@ import com.cafe24.mysite.vo.GuestbookVo;
 public class GuestbookController {
 	@Autowired
 	private GuestbookService guestbookService;
+	
+	@Autowired
+	private GuestbookService2 guestbookService2;
+	
 	
 	@RequestMapping( "" )
 	public String index( Model model ){
@@ -44,5 +51,7 @@ public class GuestbookController {
 		guestbookService.writeContent( vo );
 		return "redirect:/guestbook";
 	}
+	
+	
 
 }

@@ -18,6 +18,6 @@ import com.cafe24.mysite.test.config.web.SwaggerConfig;
 @ComponentScan({"com.cafe24.mysite.controller"})
 @Import({MVCConfig.class,SecurityConfig.class,MessageConfig.class, FileuploadConfig.class, SwaggerConfig.class})
 
-public class TestWebConfig {
+public class WebConfig {
 	
 }
