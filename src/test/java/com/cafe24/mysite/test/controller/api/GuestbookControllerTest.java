@@ -51,7 +51,7 @@ public class GuestbookControllerTest {
 
 	@Test
 	public void testDIGuestbookService() {
-		assertNotNull(guestbookService);
+		assertNotNull(guestbookService); 
 	}
 
 	@Test
@@ -72,7 +72,7 @@ public class GuestbookControllerTest {
 	@Test
 	public void testInsertGuestbook() throws Exception {
 		GuestbookVo vo = new GuestbookVo(); 
-		vo.setName("user1");
+		vo.setName("user1"); 
 		vo.setPassword("1234");
 		vo.setContents("test1");
 			
